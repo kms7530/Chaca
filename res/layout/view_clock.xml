@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clock_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_sea"
+    tools:context=".TopClock" >
+
+    <TextSwitcher
+        android:id="@+id/txtClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="90dp" >
+
+        <TextView
+            android:id="@+id/txtClock_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="90dp" />
+
+        <TextView
+            android:id="@+id/txtClock_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="90dp" />
+    </TextSwitcher>
+
+    <ProgressBar
+        android:id="@+id/barClock"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtClock"
+        android:layout_weight="0.89"
+        android:max="720" />
+
+</RelativeLayout>

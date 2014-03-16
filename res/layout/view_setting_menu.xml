@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingBack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SettingMenu" >
+
+    <TextView
+        android:id="@+id/settingName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingiCon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:text="보관함"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="40dp" />
+
+    <com.beardedhen.androidbootstrap.FontAwesomeText
+        android:id="@+id/settingiCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp" >
+    </com.beardedhen.androidbootstrap.FontAwesomeText>
+
+</RelativeLayout>
