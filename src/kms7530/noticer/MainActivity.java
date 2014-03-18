@@ -2,6 +2,9 @@ package kms7530.noticer;
 
 import java.util.ArrayList;
 
+import com.beardedhen.androidbootstrap.FontAwesomeText;
+import com.beardedhen.androidbootstrap.FontAwesomeText.AnimationSpeed;
+
 import tmp.SubMenuAdapter;
 
 import kms7530.noticer.alarm.AlarmActivity;
@@ -26,11 +29,13 @@ import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements ListView.OnItemClickListener, SensorEventListener{
 	// UI
@@ -91,6 +96,22 @@ public class MainActivity extends Activity implements ListView.OnItemClickListen
         intent.putExtra("location", "디지털 미디어 고등학교");
         intent.putExtra("icon", IconDefines.BRIEFCASE);
         this.startActivity(intent);
+        
+        if(datas.isEmpty()) {
+        	View layout = View.inflate(this, R.layout.toast, null);
+			
+			TextView tv = (TextView)layout.findViewById(R.id.toastText);
+			tv.setText("Shake it!");
+			FontAwesomeText iCon = (FontAwesomeText)layout.findViewById(R.id.toastIcon);
+			iCon.setIcon("fa-refresh");
+			iCon.startRotate(this, true, AnimationSpeed.FAST);
+			
+			Toast toast = new Toast(getApplicationContext());
+        	toast.setGravity(Gravity.CENTER, 0, 0);
+        	toast.setDuration(Toast.LENGTH_SHORT);
+        	toast.setView(layout);
+        	toast.show();
+        }
 	}
 	
 	@Override
