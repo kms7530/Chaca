@@ -90,13 +90,6 @@ public class MainActivity extends Activity implements ListView.OnItemClickListen
 		sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         accelerormeterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         
-        Intent intent = new Intent(this, AlarmActivity.class);
-        intent.putExtra("hoster", "me");
-        intent.putExtra("title", "면접");
-        intent.putExtra("location", "디지털 미디어 고등학교");
-        intent.putExtra("icon", IconDefines.BRIEFCASE);
-        this.startActivity(intent);
-        
         if(datas.isEmpty()) {
         	View layout = View.inflate(this, R.layout.toast, null);
 			
